@@ -1,11 +1,15 @@
 // Widthscreens
 @include mediaXL {
-
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktops & Laptops
 @include mediaLG {
-
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablets & Small Laptops
@@ -20,14 +24,14 @@
     }
   }
 
-  ul.menu-nav, 
+  ul.menu-nav,
   div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
 
     &.show {
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -42,20 +46,24 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url('../img/portrait_small.jpg');
+      background: url("../img/portrait_small.jpg");
       width: 150px;
       height: 150px;
     }
   }
 
   .about-info {
-    grid-template-areas: 
-    'bioimage'
-    'bio'
-    'job1'
-    'job2'
-    'job3';
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
     grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -63,5 +71,9 @@
 @include mediaSM {
   mai#home h1 {
     margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
